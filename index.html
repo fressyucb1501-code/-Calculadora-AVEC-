@@ -1,127 +1,73 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Calculadora Salarial AVEC</title>
 
-<title>Calculadora Salarial Docente – AVEC</title>
-
-<style>
-body{
-  margin:0;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-  background:#08111f;
-  color:#e8eef8;
-}
-
-.container{
-  max-width:420px;
-  margin:0 auto;
-  padding:16px;
-}
-
-h1{
-  color:#19d36b;
-  text-align:center;
-  font-size:28px;
-  margin-bottom:8px;
-}
-
-.sub{
-  text-align:center;
-  font-size:14px;
-  opacity:.85;
-  margin-bottom:20px;
-}
-
-.box{
-  background:rgba(255,255,255,.06);
-  border-radius:14px;
-  padding:14px;
-  margin-bottom:14px;
-}
-
-label{
-  font-size:14px;
-  margin-bottom:6px;
-  display:block;
-}
-
-select,input{
-  width:100%;
-  padding:10px;
-  border-radius:10px;
-  border:none;
-  background:#111c33;
-  color:#fff;
-}
-
-button{
-  width:100%;
-  padding:14px;
-  border-radius:14px;
-  border:none;
-  background:#19d36b;
-  color:#000;
-  font-size:16px;
-  margin-top:10px;
-}
-
-.link{
-  margin-top:14px;
-  text-align:center;
-}
-
-a{
-  color:#3b82f6;
-  text-decoration:none;
-}
-</style>
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto;
+      background: #0b1220;
+      color: #eaf0ff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+      padding: 20px;
+    }
+    .box {
+      max-width: 420px;
+      width: 100%;
+      background: #101a33;
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: 0 20px 40px rgba(0,0,0,.5);
+    }
+    h1 {
+      color: #19d36b;
+      margin-bottom: 8px;
+    }
+    p {
+      opacity: .9;
+      line-height: 1.4;
+    }
+    a.button {
+      display: block;
+      margin-top: 20px;
+      background: #19d36b;
+      color: #04110a;
+      text-decoration: none;
+      font-weight: 700;
+      padding: 16px;
+      border-radius: 12px;
+      font-size: 18px;
+    }
+    small {
+      display: block;
+      margin-top: 14px;
+      opacity: .7;
+    }
+  </style>
 </head>
-
 <body>
-<div class="container">
 
-<h1>Calculadora Salarial Docente</h1>
-<div class="sub">
-Fressy Brenes Sandoval · Tel/WhatsApp 8488-4738<br>
-Herramienta educativa – no sustituye criterio del MEP
-</div>
+  <div class="box">
+    <h1>Calculadora Salarial Docente</h1>
+    <p>
+      Fressy Brenes Sandoval<br>
+      Tel/WhatsApp: <strong>8488-4738</strong><br>
+      Herramienta educativa – no sustituye criterio del MEP
+    </p>
 
-<div class="box">
-<label>Tipo de Puesto</label>
-<select>
-<option>Docente</option>
-<option>Administrativo</option>
-<option>Técnico Docente</option>
-</select>
-</div>
+    <a class="button" href="app.html">
+      👉 Abrir calculadora
+    </a>
 
-<div class="box">
-<label>Categoría Profesional</label>
-<select>
-<option>Seleccione una categoría</option>
-</select>
-</div>
+    <small>Optimizado para iPhone y WhatsApp</small>
+  </div>
 
-<div class="box">
-<label>Clase de Puesto</label>
-<select>
-<option>Seleccione una clase</option>
-</select>
-</div>
-
-<div class="box">
-<label>Lecciones Totales</label>
-<input placeholder="Ej: 48">
-</div>
-
-<button>Calcular salario</button>
-
-<div class="link">
-<a href="app.html">👉 Abrir versión completa</a>
-</div>
-
-</div>
 </body>
 </html>
