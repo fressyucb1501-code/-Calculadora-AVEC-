@@ -1,120 +1,127 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-  <meta charset="utf-8">
-  <title>Calculadora Salarial AVEC</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 
-  <!-- iOS / WhatsApp SAFE -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Calculadora Salarial Docente – AVEC</title>
 
-  <style>
-    body {
-      margin: 0;
-      padding: 16px;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-      background: #08111f;
-      color: #eaf0ff;
-    }
+<style>
+body{
+  margin:0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background:#08111f;
+  color:#e8eef8;
+}
 
-    h1 {
-      color: #22e37b;
-      font-size: 24px;
-      margin-bottom: 8px;
-    }
+.container{
+  max-width:420px;
+  margin:0 auto;
+  padding:16px;
+}
 
-    p {
-      font-size: 14px;
-      line-height: 1.4;
-      opacity: 0.9;
-    }
+h1{
+  color:#19d36b;
+  text-align:center;
+  font-size:28px;
+  margin-bottom:8px;
+}
 
-    .box {
-      background: #0f1b33;
-      border-radius: 12px;
-      padding: 16px;
-      margin-top: 16px;
-    }
+.sub{
+  text-align:center;
+  font-size:14px;
+  opacity:.85;
+  margin-bottom:20px;
+}
 
-    label {
-      display: block;
-      margin-top: 12px;
-      font-size: 14px;
-    }
+.box{
+  background:rgba(255,255,255,.06);
+  border-radius:14px;
+  padding:14px;
+  margin-bottom:14px;
+}
 
-    select, input {
-      width: 100%;
-      padding: 12px;
-      margin-top: 6px;
-      border-radius: 8px;
-      border: none;
-      font-size: 16px;
-    }
+label{
+  font-size:14px;
+  margin-bottom:6px;
+  display:block;
+}
 
-    select {
-      -webkit-appearance: menulist;
-      appearance: menulist;
-    }
+select,input{
+  width:100%;
+  padding:10px;
+  border-radius:10px;
+  border:none;
+  background:#111c33;
+  color:#fff;
+}
 
-    button {
-      width: 100%;
-      padding: 14px;
-      margin-top: 20px;
-      background: #22e37b;
-      color: #002010;
-      font-size: 16px;
-      font-weight: bold;
-      border: none;
-      border-radius: 10px;
-    }
+button{
+  width:100%;
+  padding:14px;
+  border-radius:14px;
+  border:none;
+  background:#19d36b;
+  color:#000;
+  font-size:16px;
+  margin-top:10px;
+}
 
-    .link {
-      margin-top: 20px;
-      text-align: center;
-    }
+.link{
+  margin-top:14px;
+  text-align:center;
+}
 
-    a {
-      color: #4ea1ff;
-      text-decoration: none;
-      font-weight: bold;
-    }
-  </style>
+a{
+  color:#3b82f6;
+  text-decoration:none;
+}
+</style>
 </head>
 
 <body>
+<div class="container">
 
-  <h1>Calculadora Salarial Docente</h1>
+<h1>Calculadora Salarial Docente</h1>
+<div class="sub">
+Fressy Brenes Sandoval · Tel/WhatsApp 8488-4738<br>
+Herramienta educativa – no sustituye criterio del MEP
+</div>
 
-  <p>
-    Fressy Brenes Sandoval<br>
-    Tel/WhatsApp: 8488-4738<br>
-    AVEC (Costa Rica)
-  </p>
+<div class="box">
+<label>Tipo de Puesto</label>
+<select>
+<option>Docente</option>
+<option>Administrativo</option>
+<option>Técnico Docente</option>
+</select>
+</div>
 
-  <p><em>Herramienta educativa – no sustituye criterio del MEP</em></p>
+<div class="box">
+<label>Categoría Profesional</label>
+<select>
+<option>Seleccione una categoría</option>
+</select>
+</div>
 
-  <div class="box">
-    <label>Tipo de puesto</label>
-    <select>
-      <option>Docente</option>
-    </select>
+<div class="box">
+<label>Clase de Puesto</label>
+<select>
+<option>Seleccione una clase</option>
+</select>
+</div>
 
-    <label>Categoría profesional</label>
-    <select>
-      <option>Seleccione una categoría</option>
-      <option>MT4</option>
-      <option>MT5</option>
-      <option>MT6</option>
-    </select>
+<div class="box">
+<label>Lecciones Totales</label>
+<input placeholder="Ej: 48">
+</div>
 
-    <label>Lecciones nombradas</label>
-    <input type="number" placeholder="Ej: 48">
+<button>Calcular salario</button>
 
-    <button>Calcular salario</button>
-  </div>
+<div class="link">
+<a href="app.html">👉 Abrir versión completa</a>
+</div>
 
-  <div class="link">
-    <a href="app.html">👉 Abrir versión completa</a>
-  </div>
-
+</div>
 </body>
 </html>
