@@ -1,59 +1,67 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Calculadora Salarial Docente - AVEC</title>
+  <title>Calculadora Salarial Docente – AVEC</title>
+
+  <!-- CLAVE para iPhone / WhatsApp -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
   <style>
+    * { box-sizing: border-box; }
     body {
       margin: 0;
-      background: #08111f;
-      color: #e8eef8;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto;
+      min-height: 100vh;
+      background: linear-gradient(180deg, #08111f, #0a1424);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
       display: flex;
       align-items: center;
       justify-content: center;
-      min-height: 100vh;
+      padding: 16px;
+      color: #e8eef8;
     }
-
     .card {
-      background: linear-gradient(145deg, #0a1424, #0e1b33);
-      border-radius: 20px;
-      padding: 28px;
-      width: 90%;
+      width: 100%;
       max-width: 420px;
-      box-shadow: 0 20px 40px rgba(0,0,0,.45);
+      background: rgba(255,255,255,.04);
+      border-radius: 18px;
+      padding: 28px 22px;
       text-align: center;
+      box-shadow: 0 18px 45px rgba(0,0,0,.55);
     }
-
     h1 {
       color: #19d36b;
-      margin-bottom: 10px;
+      margin: 0 0 10px;
+      font-size: 28px;
+      line-height: 1.2;
     }
-
-    p {
+    .sub {
       font-size: 14px;
-      opacity: .85;
-      margin-bottom: 20px;
+      opacity: .9;
+      margin-bottom: 14px;
     }
-
-    a {
+    .note {
+      font-size: 13px;
+      opacity: .7;
+      margin-bottom: 22px;
+    }
+    a.btn {
       display: block;
-      background: #19d36b;
-      color: #02140a;
-      text-decoration: none;
-      font-weight: 700;
+      width: 100%;
       padding: 16px;
       border-radius: 14px;
+      background: linear-gradient(180deg, #1fe071, #19c860);
+      color: #022b14;
+      text-decoration: none;
+      font-weight: 700;
       font-size: 18px;
     }
-
-    small {
-      display: block;
+    .foot {
       margin-top: 14px;
-      opacity: .6;
       font-size: 12px;
+      opacity: .6;
     }
   </style>
 </head>
@@ -61,15 +69,24 @@
 <body>
   <div class="card">
     <h1>Calculadora Salarial Docente</h1>
-    <p>
+
+    <div class="sub">
       Fressy Brenes Sandoval<br>
-      Tel/WhatsApp: <strong>8488-4738</strong><br>
+      Tel/WhatsApp: <strong>8488-4738</strong>
+    </div>
+
+    <div class="note">
       Herramienta educativa – no sustituye criterio del MEP
-    </p>
+    </div>
 
-    <a href="app.html">👉 Abrir calculadora</a>
+    <!-- ESTE BOTÓN ES LA CLAVE -->
+    <a class="btn" href="app.html">
+      👉 Abrir calculadora
+    </a>
 
-    <small>Optimizada para iPhone y WhatsApp</small>
+    <div class="foot">
+      Optimizado para iPhone y WhatsApp
+    </div>
   </div>
 </body>
 </html>
