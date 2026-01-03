@@ -317,24 +317,31 @@ document.getElementById("chkAsigComp").addEventListener("change", (e)=>{
   document.getElementById("asigCompInput").style.display = on ? "" : "none";
   document.getElementById("asigCompNote").style.display = on ? "" : "none";
   if (!on) document.getElementById("leccionesComp").value = "";
-});
+function addSafeListener(el, handler) {
+  ["change", "input", "blur", "touchend"].forEach(evt => {
+    el.addEventListener(evt, handler, { passive: true });
+  });
+}
 
-tipoSel.addEventListener("change", ()=>{
+addSafeListener(tipoSel, ()=>{
   document.getElementById("resultBox").style.display = "none";
   resetSelect(claseSel, "Seleccione una clase");
   claseSel.disabled = true;
   populateGrupos(tipoSel.value);
 });
 
-grupoSel.addEventListener("change", ()=>{
+addSafeListener(grupoSel, ()=>{
   document.getElementById("resultBox").style.display = "none";
   populateClases(tipoSel.value, grupoSel.value);
 });
 
-claseSel.addEventListener("change", ()=>{
+addSafeListener(claseSel, ()=>{
   document.getElementById("resultBox").style.display = "none";
   aplicarPerfilUI();
 });
+
+
+
 
 document.getElementById("btnLimpiar").addEventListener("click", ()=>{
   tipoSel.value = "";
