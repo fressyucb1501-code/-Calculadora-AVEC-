@@ -1,146 +1,90 @@
 <!doctype html>
 <html lang="es">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Calculadora Salarial Docente - AVEC</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Calculadora Salarial Docente - AVEC</title>
 
-<style>
-body{
-  margin:0;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont;
-  background:#08111f;
-  color:#e8eef8;
-}
-.wrap{
-  max-width:420px;
-  margin:40px auto;
-  padding:24px;
-  background:linear-gradient(145deg,#0a1424,#08111f);
-  border-radius:18px;
-  box-shadow:0 20px 40px rgba(0,0,0,.45);
-}
-h1{
-  color:#19d36b;
-  text-align:center;
-  margin-bottom:6px;
-}
-.sub{
-  text-align:center;
-  font-size:14px;
-  opacity:.85;
-  margin-bottom:20px;
-}
-label{
-  display:block;
-  margin:18px 0 6px;
-}
-select,input{
-  width:100%;
-  padding:14px;
-  border-radius:12px;
-  border:none;
-  background:#101c32;
-  color:#fff;
-  font-size:16px;
-}
-button{
-  margin-top:24px;
-  width:100%;
-  padding:16px;
-  border:none;
-  border-radius:14px;
-  background:#19d36b;
-  color:#00140a;
-  font-size:18px;
-  font-weight:600;
-}
-.link{
-  margin-top:18px;
-  text-align:center;
-}
-.link a{
-  color:#3b82f6;
-  text-decoration:none;
-}
-</style>
+  <style>
+    body{
+      margin:0;
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background:linear-gradient(180deg,#08111f,#0b1a2f);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color:#e8eef8;
+    }
+
+    .card{
+      max-width:420px;
+      width:90%;
+      background:rgba(15,25,45,.9);
+      border-radius:22px;
+      padding:28px 24px;
+      text-align:center;
+      box-shadow:0 20px 60px rgba(0,0,0,.45);
+    }
+
+    h1{
+      margin:0 0 10px;
+      color:#1fd36b;
+      font-size:28px;
+      line-height:1.2;
+    }
+
+    .sub{
+      font-size:14px;
+      opacity:.85;
+      margin-bottom:20px;
+    }
+
+    .btn{
+      display:block;
+      width:100%;
+      background:#1fd36b;
+      color:#05210f;
+      font-weight:700;
+      border:none;
+      border-radius:14px;
+      padding:16px;
+      font-size:18px;
+      cursor:pointer;
+    }
+
+    .note{
+      margin-top:12px;
+      font-size:13px;
+      opacity:.7;
+    }
+  </style>
 </head>
 
 <body>
-<div class="wrap">
-  <h1>Calculadora Salarial Docente</h1>
-  <div class="sub">
-    Fressy Brenes Sandoval · Tel/WhatsApp 8488-4738<br>
-    Herramienta educativa – no sustituye criterio del MEP
+  <div class="card">
+    <h1>Calculadora Salarial Docente</h1>
+
+    <div class="sub">
+      Fressy Brenes Sandoval<br>
+      Tel/WhatsApp: <strong>8488-4738</strong><br>
+      AVEC · Costa Rica
+    </div>
+
+    <button class="btn" onclick="abrir()">
+      👉 Abrir calculadora
+    </button>
+
+    <div class="note">
+      Optimizado para iPhone y WhatsApp
+    </div>
   </div>
 
-  <label>Tipo de puesto</label>
-  <select id="tipo">
-    <option value="">Seleccione…</option>
-    <option value="docente">Docente</option>
-    <option value="administrativo">Administrativo</option>
-    <option value="tecnico">Técnico docente</option>
-  </select>
-
-  <label>Categoría profesional</label>
-  <select id="categoria">
-    <option value="">Seleccione…</option>
-  </select>
-
-  <label>Clase de puesto</label>
-  <select id="clase">
-    <option value="">Seleccione…</option>
-  </select>
-
-  <label>Lecciones totales</label>
-  <input type="number" placeholder="Ej: 48">
-
-  <button onclick="abrirApp()">Calcular salario</button>
-
-  <div class="link">
-    👉 <a href="app.html">Abrir versión completa</a>
-  </div>
-</div>
-
-<script>
-const data = {
-  docente:{
-    "MT-4":["Profesor Enseñanza Media","Educación Especial"],
-    "MT-5":["Profesor Técnico","Orientador"]
-  },
-  administrativo:{
-    "A-1":["Asistente","Auxiliar"]
-  },
-  tecnico:{
-    "T-3":["Orientador","Asesor"]
-  }
-};
-
-const tipo = document.getElementById("tipo");
-const cat  = document.getElementById("categoria");
-const cls  = document.getElementById("clase");
-
-tipo.onchange = () => {
-  cat.innerHTML = '<option value="">Seleccione…</option>';
-  cls.innerHTML = '<option value="">Seleccione…</option>';
-  if(!data[tipo.value]) return;
-  Object.keys(data[tipo.value]).forEach(k=>{
-    cat.add(new Option(k,k));
-  });
-};
-
-cat.onchange = () => {
-  cls.innerHTML = '<option value="">Seleccione…</option>';
-  const items = data[tipo.value]?.[cat.value];
-  if(!items) return;
-  items.forEach(v=>{
-    cls.add(new Option(v,v));
-  });
-};
-
-function abrirApp(){
-  location.href = "app.html";
-}
-</script>
+  <script>
+    function abrir(){
+      // fuerza abrir fuera de WhatsApp
+      window.location.href = "./app.html";
+    }
+  </script>
 </body>
 </html>
